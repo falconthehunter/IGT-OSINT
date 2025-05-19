@@ -1,34 +1,7 @@
 IGT: Information Gathering Toolkit (minimal)
 
 
-
 A high-speed, asynchronous social media username scanner that generates smart variations to find user profiles across multiple platforms. Powered by aiohttp for concurrent HTTP requests and rich for elegant CLI output and HTML reporting.
-
-
----
-
-📋 Table of Contents
-
-Features
-
-Prerequisites
-
-Installation
-
-Configuration
-
-Usage
-
-Outputs
-
-Customization
-
-Error Handling & Logs
-
-Contributing
-
-License
-
 
 
 ---
@@ -64,22 +37,22 @@ Basic Python knowledge
 🛠️ Installation
 
 1. Clone the Repository:
-
+```
 git clone https://github.com/falconthehunter/IGT-OSINT.git
 cd IGT-OSINT
-
+```
 
 2. Create & Activate Virtual Environment:
-
+```
 python3 -m venv venv
 source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate   # Windows
-
+```
 
 3. Install Dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 
 
 
@@ -88,7 +61,7 @@ pip install -r requirements.txt
 🔧 Configuration
 
 1. Platform Definitions: Edit or create plt.json based on provided sample:
-
+```
 [
   {
     "name": "twitter",
@@ -102,7 +75,7 @@ pip install -r requirements.txt
   }
   // ... add or update platforms
 ]
-
+```
 
 2. User Agents: Customize USER_AGENTS in IGT.py to rotate request headers.
 
@@ -117,36 +90,12 @@ pip install -r requirements.txt
 ▶️ Usage
 
 Run the scanner:
-
+```
 python3 IGT.py
-
+```
 Prompt: Enter the base username (e.g., johndoe).
 
 Process: The script generates variations, scans each platform concurrently, and displays a live progress bar.
-
-
-Sample Output:
-
-IGTPro Social Scan Turbo Edition — Facebook | Instagram | Twitter | Snapchat | Telegram | TikTok | Threads
-Enter the username to scan: johndoe
-Generating 100+ smart username variations...
-Scanning johndoe across 8 platforms and 120 variations (~960 checks)...
-
-[Scanning...  50%] ■■■■□□□□□□  • 00:15 / 00:30 remaining
-
-[green][+] HTML result saved to results/johndoe_scan_20250519_142530.html[/green]
-
-╭─ Scan Summary ─────────────────────────────────────────────────────────╮
-│ Platform   │ Found │ Not Found                                         │
-│ Instagram  │   5   │    115                                            │
-│ Twitter    │   3   │    117                                            │
-│ ...                                                                    │
-╰────────────────────────────────────────────────────────────────────────╯
-
-7 found / 960 checked in 32.5 seconds.
-
-
----
 
 📂 Outputs
 
@@ -155,9 +104,6 @@ results/ directory:
 errors.log: Logged exceptions and errors.
 
 <username>_scan_<timestamp>.html: Interactive HTML report with charts and details.
-
-
-
 
 ---
 
@@ -169,8 +115,6 @@ Variation Rules: Modify generate_variations() for custom patterns.
 
 Report Styling: Tweak CSS or Chart.js config in save_html().
 
-
-
 ---
 
 🐞 Error Handling & Logs
@@ -178,8 +122,6 @@ Report Styling: Tweak CSS or Chart.js config in save_html().
 All HTTP and parsing errors are appended to results/errors.log.
 
 Non-fatal errors won’t stop the scan; they’ll be recorded and skipped.
-
-
 
 ---
 
@@ -197,8 +139,6 @@ Contributions are welcome! Please:
 
 
 4. Open a Pull Request
-
-
 
 
 ---
