@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 Run the scanner:
 ```
-python3 IGT.py
+python3 igt.py
 ```
 Prompt: Enter the base username (e.g., johndoe).
 
