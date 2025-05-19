@@ -99,7 +99,7 @@ Process: The script generates variations, scans each platform concurrently, and 
 
 📂 Outputs
 
-results/ directory:
+results/ directory: Saves in a html format file.
 
 errors.log: Logged exceptions and errors.
 
@@ -150,7 +150,7 @@ This project is licensed under the MIT License. See LICENSE for details.
 
 ---
 
-> Built with ❤️ and Python by the Anhar Hussan.
+> Built with ❤️ and Python by Anhar Hussan.
 
 
 
